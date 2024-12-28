@@ -1,0 +1,26 @@
+ALGORITHM read_sentence
+VAR
+  sentence_length, n_word, n_vowels, i, charLength: INTEGER
+  writeSentence, sentence, vowels: STRING
+BEGIN
+  writeSentence = Write("Say something!!")
+  sentence = writeSentence + "."
+  vowels = [a,e,i,o,u,A,E,I,O,U]
+  sentence_length = 0
+  n_word = 0
+  n_vowels = 0
+  FOR i from 0 to charLength - 1 STEP 1 DO 
+    sentence_length++
+    IF (sentence == " ") THEN
+      n_word++
+    END_IF
+    IF (sentence == vowels) THEN
+      n_vowels++
+    END_IF
+  END_FOR
+  Write("The number of sentence is", sentence_length)
+  Write("The number of words is", n_word)
+  Write("The number of vowels is", n_vowels)
+END
+
+
